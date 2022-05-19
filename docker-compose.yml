@@ -4,7 +4,7 @@ version: '3.8'
 services:
 
   neo4j:
-    container_name: ${APP_CONTAINER_NAME}
+    container_name: ${APP_NAME}
     image: neo4j:${APP_VERSION}
     environment:
     #   SECURE_FILE_PERMISSIONS=yes
@@ -14,11 +14,17 @@ services:
      - 7687:7687
     restart: always
     volumes:
-     - ${VOLUMES_PATH_PREFIX}/neo4j/data:/data
-     - ${VOLUMES_PATH_PREFIX}/neo4j/logs:/logs
-     - ${VOLUMES_PATH_PREFIX}/neo4j/conf:/conf
-     - ${VOLUMES_PATH_PREFIX}/neo4j/plugins:/plugins
+     - neo4j_data:/data
+     - neo4j_logs:/logs
+     - neo4j_conf:/conf
+     - neo4j_plugins:/plugins
   
 networks:
   default:
-    name: ${APP_NETWORK}
+    name: ${APP_NAME}
+    
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_conf:
+  neo4j_plugins:
