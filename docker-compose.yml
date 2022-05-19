@@ -1,4 +1,5 @@
-# Default user: neo4j, password is 123456
+# docker image refer to: https://hub.docker.com/_/neo4j
+# docker docs refer to: 
 
 version: '3.8'
 services:
