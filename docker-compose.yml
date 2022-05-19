@@ -14,10 +14,10 @@ services:
      - ${APP_PORT}:7474
     restart: always
     volumes:
-     - neo4j_data:/data
-     - neo4j_logs:/logs
-     - neo4j_conf:/conf
-     - neo4j_plugins:/plugins
+     - neo4j_data:/var/lib/neo4j/data
+     - neo4j_logs:/var/lib/neo4j/logs
+     - neo4j_conf:/var/lib/neo4j/conf
+     - neo4j_plugins:/var/lib/neo4j/plugins
   
 networks:
   default:
