@@ -10,8 +10,8 @@ services:
     #   SECURE_FILE_PERMISSIONS=yes
      - NEO4J_AUTH=${DB_NEO4J_USER}/${DB_NEO4J_PASSWORD}
     ports:
-     - ${DB_NEO4J_PORT}:7474
-     - ${APP_PORT}:7687
+     - ${DB_NEO4J_PORT}:7687
+     - ${APP_PORT}:7474
     restart: always
     volumes:
      - neo4j_data:/data
