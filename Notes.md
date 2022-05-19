@@ -1,6 +1,3 @@
-## About
+## 从合规上是否能够发布企业版？
 
-This repository is forked from ONLYOFFICE/Docker-CommunityServer, we have the following modifications are provided
-
-* replace README.md
-* add README-zh.md, CHANGELOG.md, Note.md, License.md, docker-compose.yml,.env, src, .github folder
+https://neo4j.com/open-core-and-neo4j/
