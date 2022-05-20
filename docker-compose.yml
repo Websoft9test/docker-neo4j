@@ -1,5 +1,5 @@
-# docker image refer to: https://hub.docker.com/_/neo4j
-# docker docs refer to: 
+# image: https://hub.docker.com/_/neo4j
+# docs: https://neo4j.com/docs/operations-manual/current/docker/
 
 version: '3.8'
 services:
@@ -15,17 +15,11 @@ services:
      - ${APP_PORT}:7474
     restart: always
     volumes:
-     - neo4j_data:/var/lib/neo4j/data
-     - neo4j_logs:/var/lib/neo4j/logs
-     - neo4j_conf:/var/lib/neo4j/conf
-     - neo4j_plugins:/var/lib/neo4j/plugins
+     - neo4j:/var/lib/neo4j
   
 networks:
   default:
     name: ${APP_NAME}
     
 volumes:
-  neo4j_data:
-  neo4j_logs:
-  neo4j_conf:
-  neo4j_plugins:
+  neo4j:
