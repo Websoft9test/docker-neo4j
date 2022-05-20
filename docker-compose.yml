@@ -1,5 +1,5 @@
 # image: https://hub.docker.com/_/neo4j
-# docs: https://neo4j.com/docs/operations-manual/current/docker/
+# docs: https://neo4j.com/docs/operations-manual/current/docker/introduction/
 
 version: '3.8'
 services:
